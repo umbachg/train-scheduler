@@ -1,0 +1,11 @@
+h1 {
+    color: white;
+    height: 100px;
+    background-color: teal;
+    text-align: center;
+    padding-top: 25px;
+}
+
+body {
+    background:linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url();
+}

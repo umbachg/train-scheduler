@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-database.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <title>Train</title>
+</head>
+
+<body>
+    <div class="container mt-2 mb-4">
+        <h1>Train Tracker</h1>
+        <br>
+        <table class=" table border p-2 rounded text-white">
+            <div class="col-12">
+                <thead class="#">
+                    <tr>
+                        <th scope="col" id="trainName">Train Name</th>
+                        <th scope="col" id="destination">Destination</th>
+                        <th scope="col" id="frequency">Frequency</th>
+                        <th scope="col" id="nextArrival">Next Arrival</th>
+                        <th scope="col" id="minutesAway">Minutes Away</th>
+                    </tr>
+                </thead>
+                <tbody id="infoTable">
+
+                </tbody>
+            </div>
+        </table>
+        <div class="row">
+            <div id="addTrainHeader" class="col-12 p-4 bg-secondary rounded">
+                <h4 class="ml-4 text-white">Add a new train</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form class="border p-2 rounded text-white">
+                    <label for="formTrainName">Train Name</label>
+                    <br>
+                    <input type="text" name="formTrainName" id="formTrainName">
+                    <br>
+                    <label for="destination">Destination</label>
+                    <br>
+                    <input type="text" name="formDestination" id="formDestination">
+                    <br>
+                    <label for="firstTrainTime">First Train Time (HH:mm) Military Time</label>
+                    <br>
+                    <input type="text" name="formFirstTrainTime" id="formFirstTrainTime">
+                    <br>
+                    <label for="frequency">Frequency (min)</label>
+                    <br>
+                    <input type="text" name="formFrequency" id="formFrequency">
+                    <br>
+                    <button type="button" id="submit" class="btn btn-primary mt-2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="./assets/js/train.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HW8</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-database.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</head>
+
+
+<body>
+
+    <div class="container mt-2 mb-4">
+        <h1>Train Tracker</h1>
+        <br>
+        <table class=" table border p-2 rounded text-white">
+            <div class="col-12">
+                <thead class="#">
+                    <tr>
+                        <th scope="col" id="trainName">Train Name</th>
+                        <th scope="col" id="destination">Destination</th>
+                        <th scope="col" id="frequency">Frequency</th>
+                        <th scope="col" id="nextArrival">Next Arrival</th>
+                        <th scope="col" id="minutesAway">Minutes Away</th>
+                    </tr>
+                </thead>
+                <tbody id="infoTable">
+
+                </tbody>
+            </div>
+        </table>
+        <div class="row">
+            <div id="addTrainHeader" class="col-12 p-4 bg-secondary rounded">
+                <h4 class="ml-4 text-white">Add a new train</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form class="border p-2 rounded text-white">
+                    <label for="formTrainName">Train Name</label>
+                    <br>
+                    <input type="text" name="formTrainName" id="formTrainName">
+                    <br>
+                    <label for="destination">Destination</label>
+                    <br>
+                    <input type="text" name="formDestination" id="formDestination">
+                    <br>
+                    <label for="firstTrainTime">First Train Time (HH:mm) Military Time</label>
+                    <br>
+                    <input type="text" name="formFirstTrainTime" id="formFirstTrainTime">
+                    <br>
+                    <label for="frequency">Frequency (min)</label>
+                    <br>
+                    <input type="text" name="formFrequency" id="formFrequency">
+                    <br>
+                    <button type="button" id="submit" class="btn btn-primary mt-2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="./assets/js/train.js"></script>
+</body>
+
+</html> -->
