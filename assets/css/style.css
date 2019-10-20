@@ -1,11 +1,30 @@
 h1 {
     color: white;
     height: 100px;
-    background-color: teal;
+    background-color: rgba(122, 76, 76, 0.911);
     text-align: center;
-    padding-top: 25px;
+    padding-top: 30px;
 }
 
 body {
-    background:linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url();
+    background: url("../images/michal-parzuchowski-dmH3NWhYTHQ-unsplash.jpg");
+    height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 70px;
+    
 }
+
+#submit {
+background-color: rgb(255, 221, 110);
+border-color: rgb(255, 196, 0);
+}
+
+table, form {
+    background-color: rgb(0, 0, 0, 0.5);
+    color: inherit;
+    color: white;
+    
+}
+

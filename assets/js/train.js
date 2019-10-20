@@ -1,14 +1,4 @@
-// var firebaseConfig = {
-//     apiKey: "AIzaSyAJHM80KPk93fwTzKoHk-6vBfDUX98Fuik",
-//     authDomain: "trainhw8.firebaseapp.com",
-//     databaseURL: "https://trainhw8.firebaseio.com",
-//     projectId: "trainhw8",
-//     storageBucket: "trainhw8.appspot.com",
-//     messagingSenderId: "1010076165224",
-//     appId: "1:1010076165224:web:58eed6e4bf17b2ff0007dd"
-// };
-
-var config = {
+var firebaseConfig = {
     apiKey: "AIzaSyAJHM80KPk93fwTzKoHk-6vBfDUX98Fuik",
     authDomain: "trainhw8.firebaseapp.com",
     databaseURL: "https://trainhw8.firebaseio.com",
@@ -19,7 +9,7 @@ var config = {
   };
 
 // Initialize Firebase
-firebase.initializeApp(config);
+firebase.initializeApp(firebaseConfig);
 
 var trainTime
 var destination
@@ -30,7 +20,6 @@ var frequency
 $(document).ready(function () {
 
     var database = firebase.database()
-
 
     $("#submit").on("click", function (e) {
         e.preventDefault()
