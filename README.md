@@ -1,5 +1,4 @@
 # train-scheduler
-https://umbachg.github.io/train-scheduler/
 
 Created by Gabrielle Umbach
 ____________
